@@ -1,0 +1,43 @@
+missing module named 'multiprocessing.forking' - imported by d:\python36-32\lib\site-packages\PyInstaller\loader\rthooks\pyi_rth_multiprocessing.py
+missing module named multiprocessing.get_context - imported by multiprocessing, multiprocessing.pool, multiprocessing.managers, multiprocessing.sharedctypes
+missing module named multiprocessing.TimeoutError - imported by multiprocessing, multiprocessing.pool
+missing module named multiprocessing.BufferTooShort - imported by multiprocessing, multiprocessing.connection
+missing module named multiprocessing.AuthenticationError - imported by multiprocessing, multiprocessing.connection
+missing module named multiprocessing.set_start_method - imported by multiprocessing, multiprocessing.spawn
+missing module named multiprocessing.get_start_method - imported by multiprocessing, multiprocessing.spawn
+missing module named multiprocessing.SimpleQueue - imported by multiprocessing, concurrent.futures.process
+missing module named resource - imported by posix, D:\Sources\Projects\SRC\PyAPI\SRCServer.py
+missing module named posix - imported by os, D:\Sources\Projects\SRC\PyAPI\SRCServer.py
+missing module named _posixsubprocess - imported by subprocess, multiprocessing.util, D:\Sources\Projects\SRC\PyAPI\SRCServer.py
+missing module named org - imported by pickle, D:\Sources\Projects\SRC\PyAPI\SRCServer.py
+missing module named readline - imported by cmd, code, pdb, D:\Sources\Projects\SRC\PyAPI\SRCServer.py
+excluded module named _frozen_importlib - imported by importlib, importlib.abc, D:\Sources\Projects\SRC\PyAPI\SRCServer.py
+missing module named _frozen_importlib_external - imported by importlib._bootstrap, importlib, importlib.abc, D:\Sources\Projects\SRC\PyAPI\SRCServer.py
+missing module named _winreg - imported by platform, D:\Sources\Projects\SRC\PyAPI\SRCServer.py
+missing module named _scproxy - imported by urllib.request
+missing module named java - imported by platform, D:\Sources\Projects\SRC\PyAPI\SRCServer.py
+missing module named 'java.lang' - imported by platform, D:\Sources\Projects\SRC\PyAPI\SRCServer.py, xml.sax._exceptions
+missing module named vms_lib - imported by platform, D:\Sources\Projects\SRC\PyAPI\SRCServer.py
+missing module named termios - imported by tty, serial.serialposix, D:\Sources\Projects\SRC\PyAPI\SRCServer.py, getpass
+missing module named urllib.unquote - imported by urllib, gevent.pywsgi
+missing module named grp - imported by shutil, tarfile, D:\Sources\Projects\SRC\PyAPI\SRCServer.py
+missing module named pwd - imported by posixpath, shutil, tarfile, http.server, webbrowser, D:\Sources\Projects\SRC\PyAPI\SRCServer.py, netrc, getpass
+missing module named _dummy_threading - imported by dummy_threading, D:\Sources\Projects\SRC\PyAPI\SRCServer.py
+missing module named 'org.python' - imported by copy, D:\Sources\Projects\SRC\PyAPI\SRCServer.py, xml.sax
+missing module named ipdb - imported by geventwebsocket.utf8validator
+missing module named wsaccel - imported by geventwebsocket.utf8validator
+missing module named _continuation - imported by gevent.greenlet
+missing module named cPickle - imported by gevent._tblib
+missing module named cStringIO - imported by cPickle
+missing module named copy_reg - imported by gevent._tblib, cPickle, cStringIO
+missing module named __pypy__ - imported by gevent._tblib
+missing module named thread - imported by gevent.hub, gevent.lock, gevent.thread
+missing module named fcntl - imported by serial.serialposix, gevent.os, gevent.fileobject, gevent.subprocess
+missing module named __builtin__ - imported by gevent._compat, gevent.libev.corecffi, gevent.monkey, gevent.builtins
+missing module named mimetools - imported by gevent.pywsgi
+invalid module named gevent._util_py2 - imported by gevent._compat
+missing module named Queue - imported by gevent.queue, gevent._threading
+missing module named 'gevent.ares' - imported by gevent.resolver_ares
+missing module named 'gevent.libev._corecffi' - imported by gevent.libev.corecffi
+missing module named 'System.IO' - imported by serial.serialcli
+missing module named System - imported by serial.serialcli
