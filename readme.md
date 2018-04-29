@@ -1,6 +1,7 @@
 # Simple Robot Controller #
 
 ## Getting Started ##
+
 	Just execute the PyAPI/SRCServer.py or compiled/dist/SRCServer.exe (if you are using windows) and visit 127.0.0.1 in order to view the web application.
 	You will have to put your service ip and port in the boxes at the top left corner. After that click connect and you will have connected to the server.
 	You can paste your configuration data in the text area after the button connect and then click load configuration file. This will replace the default configuration file
@@ -12,12 +13,14 @@
 	SRC is a simple api/service/server that allow multiple clients to send serial signals to one device.
 
 ## Authors ##
-### Callibrator callibrator21@gmail.com ###
+
+* Callibrator callibrator21@gmail.com
 	
 ## Configuration ##
+
 ### You can configure everything in the server by changing the server.config file ###
 
-`	
+```	
 
 	service_port: The port of the tcp server, The clients use this port to connect to your server and send signals.
 	web_port: The port of your web server. The web server is optional and you can ignore using it. You can use another web server like apache.
@@ -31,13 +34,13 @@
 	
 	bandwidth: Your serial communication bandwith (usually 9600)
 	
-`
+```
 
 ### The Client Configuration ###
 
 	The web page allows use to set a JSON object and describe what key sends what signal. For Example
 	
-`
+```
 
 	{
 		"keys": {
@@ -56,7 +59,7 @@
 
 	}
 	
-`
+```
 
 
 	in keys struct you can describe the keyboard key and what message sends each key. Taking into consideration the above example, if you press the w key you will send
@@ -72,13 +75,13 @@
 		for example:
 		
 		
-`
+```
 
 	Serial.print("<div>");
 	Serial.print(a_variable);
 	Serial.println("</div>");
 	
-`
+```
 
 	will send to the servcer <div> YOUR VALUE OF THE VARIABLE </div>
 		
