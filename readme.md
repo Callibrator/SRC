@@ -67,6 +67,7 @@
 	in mouse you can set what mouse will send. It can only take 4 key-pairs (up,down,left,right) similar to keys struct. More specifically if you move your mouse up
 	you will send forward...
 	
+	The mouse keys work on mobile phones as swipes.
 	
 ### The Arduino ###
 

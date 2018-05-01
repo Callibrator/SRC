@@ -10,7 +10,7 @@ function sendSignal(signal){
 }
 
 function onMessage(msg){
-  console.log(msg)
+  
   html = $("#terminal").html()
   $("#terminal").html(html + msg.data)
 
@@ -63,4 +63,40 @@ function mouseMoveEvent(e){
 }
 
 window.addEventListener('keydown',keyDownEvent)
-window.addEventListener('mousemove',mouseMoveEvent)
+
+if( navigator.userAgent.match(/Android/i)
+ || navigator.userAgent.match(/webOS/i)
+ || navigator.userAgent.match(/iPhone/i)
+ || navigator.userAgent.match(/iPad/i)
+ || navigator.userAgent.match(/iPod/i)
+ || navigator.userAgent.match(/BlackBerry/i)
+ || navigator.userAgent.match(/Windows Phone/i)
+ ){
+    var mc = new Hammer(window)
+	mc.on("panleft panright panup pandown",function(ev){
+		
+		if(SIGNALS["mouse"]["right"] && ev.type=="panright"){
+		  sendSignal(SIGNALS["mouse"]["right"])
+		}
+		
+		if(SIGNALS["mouse"]["left"] && ev.type=="panleft"){
+		  sendSignal(SIGNALS["mouse"]["left"])
+		}
+		
+		if(SIGNALS["mouse"]["up"] && ev.type=="panup"){
+		  sendSignal(SIGNALS["mouse"]["up"])
+		}
+		
+		if(SIGNALS["mouse"]["down"] && ev.type=="pandown"){
+		  sendSignal(SIGNALS["mouse"]["down"])
+		}
+	
+	})
+
+  }
+ else {
+    window.addEventListener('mousemove',mouseMoveEvent)
+
+  }
+  
+

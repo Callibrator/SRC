@@ -34,6 +34,12 @@ class Connect extends React.Component{
         isConnected = true;
         this.setState({connected:true})
       }
+      
+      connection.onerror = () =>{
+		isConnected = false;
+        this.setState({connected:false})
+		$("#app_info_div").text("Unable to communicate with the server, Check your ip and port")
+	  }
       connection.onmessage  = onMessage
 
     }else{
