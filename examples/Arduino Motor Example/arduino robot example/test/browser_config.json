@@ -1,0 +1,18 @@
+{ 
+ 	"keys": { 
+ 		"w": "forward", 
+ 		"s": "backward", 
+ 		"d": "left", 
+ 		"a": "right",
+ 		"q": "forward2",
+ 		"e": "backward2",
+ 		"z": "forward3",
+ 		"x": "backward3" 
+ 	}, 
+ 	"mouse": { 
+ 		"up": "forward", 
+ 		"down": "backward", 
+ 		"left": "left", 
+ 		"right": "right" 
+ 	} 
+ }

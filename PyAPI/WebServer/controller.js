@@ -8,8 +8,8 @@ class Connect extends React.Component{
   }
   connect(e){
     if(this.state.connected == false){
-      ip = $('#ip').val().trim()
-      port = parseInt($('#port').val().trim())
+      let ip = $('#ip').val().trim()
+      let port = parseInt($('#port').val().trim())
 
       if(!ip || ip == ""){
         $("#app_info_div").text("Ip can not be empty")
