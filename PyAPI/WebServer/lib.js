@@ -1,7 +1,8 @@
-SIGNALS = {}
+let SIGNALS = {}
 
-connection = Object()
-isConnected = false;
+let connection = Object()
+let isConnected = false;
+let EnableMouse = false;
 
 function sendSignal(signal){
   if(isConnected){
@@ -9,8 +10,13 @@ function sendSignal(signal){
   }
 }
 
+function enableMouseShortcut(){
+
+  EnableMouse = !EnableMouse
+}
+
 function onMessage(msg){
-  
+
   html = $("#terminal").html()
   $("#terminal").html(html + msg.data)
 
@@ -19,6 +25,11 @@ function onMessage(msg){
 
 function keyDownEvent(e){
 
+  if(e.key == "F9")
+  {
+    enableMouseShortcut()
+    return 0
+  }
   if(SIGNALS["keys"]){
     Object.keys(SIGNALS["keys"]).forEach(function(key,index){
 
@@ -33,7 +44,7 @@ function keyDownEvent(e){
 }
 
 function mouseMoveEvent(e){
-  if(!SIGNALS["mouse"])
+  if(!SIGNALS["mouse"] || !EnableMouse)
     return;
 
   offset = 10
@@ -74,23 +85,23 @@ if( navigator.userAgent.match(/Android/i)
  ){
     var mc = new Hammer(window)
 	mc.on("panleft panright panup pandown",function(ev){
-		
+
 		if(SIGNALS["mouse"]["right"] && ev.type=="panright"){
 		  sendSignal(SIGNALS["mouse"]["right"])
 		}
-		
+
 		if(SIGNALS["mouse"]["left"] && ev.type=="panleft"){
 		  sendSignal(SIGNALS["mouse"]["left"])
 		}
-		
+
 		if(SIGNALS["mouse"]["up"] && ev.type=="panup"){
 		  sendSignal(SIGNALS["mouse"]["up"])
 		}
-		
+
 		if(SIGNALS["mouse"]["down"] && ev.type=="pandown"){
 		  sendSignal(SIGNALS["mouse"]["down"])
 		}
-	
+
 	})
 
   }
@@ -98,5 +109,3 @@ if( navigator.userAgent.match(/Android/i)
     window.addEventListener('mousemove',mouseMoveEvent)
 
   }
-  
-

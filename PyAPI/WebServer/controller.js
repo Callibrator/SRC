@@ -34,7 +34,7 @@ class Connect extends React.Component{
         isConnected = true;
         this.setState({connected:true})
       }
-      
+
       connection.onerror = () =>{
 		isConnected = false;
         this.setState({connected:false})
@@ -74,6 +74,7 @@ class Connect extends React.Component{
 
         <input type="button" className="connect_buttons" onClick={this.connect.bind(this)} value={(this.state.connected==false)?"Connect":"Disconnect"} />
         <p>JSON Configuration Data</p>
+        <EnableMouseCheckBox />
         <textArea id="user_config_data">
         {
 
@@ -100,6 +101,43 @@ class Connect extends React.Component{
 
     )
   }
+}
+
+class EnableMouseCheckBox extends React.Component{
+  constructor(props){
+    super(props)
+    this.state = {
+      enabled:false
+    }
+
+    this.mouseTracker = this.mouseTracker.bind(this)
+
+  }
+
+  mouseTracker(){
+    this.setState({
+      enabled:EnableMouse
+    })
+
+  }
+
+  componentDidMount(){
+    this.mouseTrackerInterval = setInterval(this.mouseTracker,100)
+  }
+
+  componentWillUnmount(){
+    clearInterval(this.mouseTrackerInterval)
+  }
+
+  switchState(e){
+
+    EnableMouse = e.target.checked
+  }
+
+  render(){
+    return <label><input type="checkbox" checked={this.state.enabled} onChange={this.switchState.bind(this)} /> <span className="small_note">Enable Mouse (F9)</span></label>
+  }
+
 }
 
 
